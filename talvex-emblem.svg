@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 140" fill="none" class="talvex-svg-emblem">
+  <defs>
+    <!-- Subtle metallic sheen gradients matching Talvex brand -->
+    <linearGradient id="talvexWhiteSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F2F5FB" />
+      <stop offset="100%" stop-color="#DCE4F0" />
+    </linearGradient>
+    <linearGradient id="talvexGoldSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7E479" />
+      <stop offset="35%" stop-color="#DDAE3B" />
+      <stop offset="100%" stop-color="#B8861E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left T (White) -->
+  <polygon
+    points="24,1 103,1 77,32 77,137 53,137 53,32 1,32"
+    fill="url(#talvexWhiteSheen)"
+  />
+
+  <!-- Right T (Gold) -->
+  <polygon
+    points="115,1 164,1 138,32 113,32 113,90 88,118 88,34"
+    fill="url(#talvexGoldSheen)"
+  />
+</svg>

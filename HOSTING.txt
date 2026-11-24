@@ -1,0 +1,25 @@
+Build: node build.cjs
+Publish only dist/, never the entire workspace. Existing unused artwork stays in
+the source folder and is excluded from the deployment package.
+
+Netlify: use the included netlify.toml or upload dist/. Enable form detection in
+the Netlify dashboard, redeploy, and configure submission notifications. Send one
+real test after deployment and confirm it appears in Forms before launch.
+https://docs.netlify.com/manage/forms/setup/
+
+The contact form needs Netlify Forms. Other static hosts can serve the site, but
+require a separate form backend. Until connected, the JavaScript displays the
+direct email address and does not simulate successful submission.
+
+Connect the purchased domain through the host dashboard and enable HTTPS and
+HTTP-to-HTTPS redirects. Verify the _headers rules in live HTTP responses;
+other hosts may require equivalent configuration. Inline styles remain allowed
+for existing layout markup; inline scripts and external scripts are blocked.
+
+After choosing the final domain, add its canonical URL and sitemap. Confirm the
+business details and marketing claims before publishing. Google Fonts remains
+an external font dependency, with local fallback fonts.
+
+Verify desktop/mobile navigation, all service dialogs and keyboard navigation,
+reduced-motion settings, failed form requests, and successful form delivery.
+Client-side field limits are usability controls, not server-side validation.
