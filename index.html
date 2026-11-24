@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=3a59294d-55d0-4bf0-951d-96b325ee59a9
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Talvex Private Limited provides modern web development, mobile app development, custom software, cloud solutions, AI automation, UI/UX design and technology consulting services." />
   <title>Talvex Private Limited | Technology &amp; Digital Solutions</title>
-  <link rel="icon" type="image/png" sizes="64x64" href="talvex-app-icon-64.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="talvex-app-icon-180.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -17,7 +23,6 @@
   <script src="assets/site.js" defer></script>
 </head>
 <body>
-  <div class="cursor-glow" id="cursorGlow"></div>
   <div class="scroll-progress-bar" id="scrollProgress"></div>
   <div class="nav-container">
     <nav class="nav-pill" id="navbar">
@@ -64,7 +69,8 @@
               and apps.
             </h1>
             <p class="hc-subtext">
-              Talvex is a website and app development company. We engineer high-performance web platforms, intelligent cloud systems, and modern mobile applications.
+              Talvex is a website and app development company. We engineer high-performance web platforms, scalable
+              software systems, and modern mobile applications.
             </p>
             <div class="hc-cta-wrap">
               <a href="#contact" class="btn-start-project">
@@ -195,182 +201,209 @@
       </div>
     </div>
   </section>
-    <section id="services">
+  <section id="services">
     <div class="services-header">
       <p class="section-label reveal">Our Services • Interactive Solutions</p>
       <h2 class="section-title reveal">Engineered for Impact.<br />Designed to Scale.</h2>
       <p class="section-desc reveal" style="margin: 0 auto;">Explore our technology solutions in motion. Click any service card to bring it into focus, or click again to inspect full capabilities.</p>
     </div>
-
-    <div class="slider-wrapper orbit-wrapper" id="sliderWrapper">
-      <div class="slider-glow orbit-glow"></div>
-
-      <!-- 3D Orbit Carousel Card Stage -->
-      <div class="slider-stage orbit-stage" id="sliderStage">
-
-        <div class="slider-card orbit-card" data-index="0" data-service-id="web">
-          <div class="slider-card-top orbit-card-top">
-            <span class="slider-card-badge orbit-card-badge">Next.js • High Speed</span>
-            <div class="slider-card-icon orbit-card-icon">🌐</div>
+    <div class="slider-wrapper" id="sliderWrapper">
+      <div class="slider-glow"></div>
+      <div class="slider-stage" id="sliderStage">
+        <div class="slider-card" data-index="0" data-service-id="software">
+          <div class="slider-card-top">
+            <span class="slider-card-badge">Enterprise • Architecture</span>
+            <div class="slider-card-icon">🛠️</div>
           </div>
-          <div class="slider-card-art orbit-card-art">
-            <h3 class="slider-card-title orbit-card-title">Modern Web Development</h3>
-            <p class="slider-card-desc orbit-card-desc">Create blazing-fast, responsive, secure, and intuitive web applications with modern React frameworks.</p>
-            <div class="slider-card-art-visual orbit-card-art-visual">
+          <div class="slider-card-art">
+            <h3 class="slider-card-title">Custom Software Development</h3>
+            <p class="slider-card-desc">Build tailored, scalable software systems designed around specific enterprise workflows and high-concurrency needs.</p>
+            <div class="slider-card-art-visual">
+              <div class="card-art-code"><span class="c-line c-kw">const</span> <span class="c-fn">system</span> = <span class="c-obj">Talvex</span>.<span class="c-fn">build</span>({<br>&nbsp;&nbsp;<span class="c-prop">scale</span>: <span class="c-str">"unlimited"</span>,<br>&nbsp;&nbsp;<span class="c-prop">security</span>: <span class="c-num">99.99</span><br>});</div>
+            </div>
+          </div>
+          <div class="slider-card-bottom">
+            <button class="slider-card-action" aria-label="View details for Custom Software Development">
+              <span>View Details</span>
+              <span class="arrow-glyph">↗</span>
+            </button>
+            <div class="slider-card-tech-dots">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="slider-card" data-index="1" data-service-id="web">
+          <div class="slider-card-top">
+            <span class="slider-card-badge">Next.js • High Speed</span>
+            <div class="slider-card-icon">🌐</div>
+          </div>
+          <div class="slider-card-art">
+            <h3 class="slider-card-title">Modern Web Development</h3>
+            <p class="slider-card-desc">Create blazing-fast, responsive, secure, and intuitive web applications with modern React frameworks.</p>
+            <div class="slider-card-art-visual">
               <div class="card-art-web"><div class="web-bar"><span class="wb-dot red"></span><span class="wb-dot"></span><span class="wb-dot"></span><div class="wb-url">https://talvex.com</div></div><div class="web-lines"><span></span><span></span><span class="short red"></span></div></div>
             </div>
           </div>
-          <div class="slider-card-bottom orbit-card-bottom">
-            <button class="slider-card-action orbit-card-action" aria-label="View details for Modern Web Development">
+          <div class="slider-card-bottom">
+            <button class="slider-card-action" aria-label="View details for Modern Web Development">
               <span>View Details</span>
               <span class="arrow-glyph">↗</span>
             </button>
-            <div class="slider-card-tech-dots orbit-card-tech-dots">
+            <div class="slider-card-tech-dots">
               <span></span><span></span><span></span>
             </div>
           </div>
         </div>
-
-        <div class="slider-card orbit-card" data-index="1" data-service-id="mobile">
-          <div class="slider-card-top orbit-card-top">
-            <span class="slider-card-badge orbit-card-badge">iOS • Android • Native</span>
-            <div class="slider-card-icon orbit-card-icon">📱</div>
+        <div class="slider-card" data-index="2" data-service-id="mobile">
+          <div class="slider-card-top">
+            <span class="slider-card-badge">iOS • Android • Native</span>
+            <div class="slider-card-icon">📱</div>
           </div>
-          <div class="slider-card-art orbit-card-art">
-            <h3 class="slider-card-title orbit-card-title">Mobile App Development</h3>
-            <p class="slider-card-desc orbit-card-desc">Develop high-performance, intuitive mobile apps for iOS and Android using modern cross-platform native frameworks.</p>
-            <div class="slider-card-art-visual orbit-card-art-visual">
+          <div class="slider-card-art">
+            <h3 class="slider-card-title">Mobile App Development</h3>
+            <p class="slider-card-desc">Develop high-performance, intuitive mobile apps for iOS and Android using modern cross-platform native frameworks.</p>
+            <div class="slider-card-art-visual">
               <div class="card-art-mob"><div class="mob-notch"><span class="notch-cam"></span></div><div class="mob-card"><div class="mob-dot red"></div><div class="mob-bar"></div></div></div>
             </div>
           </div>
-          <div class="slider-card-bottom orbit-card-bottom">
-            <button class="slider-card-action orbit-card-action" aria-label="View details for Mobile App Development">
+          <div class="slider-card-bottom">
+            <button class="slider-card-action" aria-label="View details for Mobile App Development">
               <span>View Details</span>
               <span class="arrow-glyph">↗</span>
             </button>
-            <div class="slider-card-tech-dots orbit-card-tech-dots">
+            <div class="slider-card-tech-dots">
               <span></span><span></span><span></span>
             </div>
           </div>
         </div>
-
-        <div class="slider-card orbit-card" data-index="2" data-service-id="uiux">
-          <div class="slider-card-top orbit-card-top">
-            <span class="slider-card-badge orbit-card-badge">Figma • Systems • Delight</span>
-            <div class="slider-card-icon orbit-card-icon">🎨</div>
+        <div class="slider-card" data-index="3" data-service-id="uiux">
+          <div class="slider-card-top">
+            <span class="slider-card-badge">Figma • Systems • Delight</span>
+            <div class="slider-card-icon">🎨</div>
           </div>
-          <div class="slider-card-art orbit-card-art">
-            <h3 class="slider-card-title orbit-card-title">UI/UX Design & Architecture</h3>
-            <p class="slider-card-desc orbit-card-desc">Design clean, intuitive, and visually memorable digital interfaces crafted with empathy and tested for usability.</p>
-            <div class="slider-card-art-visual orbit-card-art-visual">
+          <div class="slider-card-art">
+            <h3 class="slider-card-title">UI/UX Design & Architecture</h3>
+            <p class="slider-card-desc">Design clean, intuitive, and visually memorable digital interfaces crafted with empathy and tested for usability.</p>
+            <div class="slider-card-art-visual">
               <div class="card-art-design"><div class="d-palette"><span style="background:#DC2626"></span><span style="background:#4B5563"></span><span style="background:#1F2937"></span></div><div class="d-vector"></div></div>
             </div>
           </div>
-          <div class="slider-card-bottom orbit-card-bottom">
-            <button class="slider-card-action orbit-card-action" aria-label="View details for UI/UX Design & Architecture">
+          <div class="slider-card-bottom">
+            <button class="slider-card-action" aria-label="View details for UI/UX Design & Architecture">
               <span>View Details</span>
               <span class="arrow-glyph">↗</span>
             </button>
-            <div class="slider-card-tech-dots orbit-card-tech-dots">
+            <div class="slider-card-tech-dots">
               <span></span><span></span><span></span>
             </div>
           </div>
         </div>
-
-        <div class="slider-card orbit-card" data-index="3" data-service-id="cloud">
-          <div class="slider-card-top orbit-card-top">
-            <span class="slider-card-badge orbit-card-badge">Resilient • High Scale</span>
-            <div class="slider-card-icon orbit-card-icon">☁️</div>
+        <div class="slider-card" data-index="4" data-service-id="cloud">
+          <div class="slider-card-top">
+            <span class="slider-card-badge">Resilient • High Scale</span>
+            <div class="slider-card-icon">☁️</div>
           </div>
-          <div class="slider-card-art orbit-card-art">
-            <h3 class="slider-card-title orbit-card-title">Cloud Solutions & Infra</h3>
-            <p class="slider-card-desc orbit-card-desc">Architect and deploy resilient, high-availability cloud infrastructure built for elastic growth and enterprise security.</p>
-            <div class="slider-card-art-visual orbit-card-art-visual">
+          <div class="slider-card-art">
+            <h3 class="slider-card-title">Cloud Solutions & Infra</h3>
+            <p class="slider-card-desc">Architect and deploy resilient, high-availability cloud infrastructure built for elastic growth and enterprise security.</p>
+            <div class="slider-card-art-visual">
               <div class="card-art-cloud"><div class="cloud-ring cr-1"></div><div class="cloud-ring cr-2"></div><div class="cloud-center">☁</div></div>
             </div>
           </div>
-          <div class="slider-card-bottom orbit-card-bottom">
-            <button class="slider-card-action orbit-card-action" aria-label="View details for Cloud Solutions & Infra">
+          <div class="slider-card-bottom">
+            <button class="slider-card-action" aria-label="View details for Cloud Solutions & Infra">
               <span>View Details</span>
               <span class="arrow-glyph">↗</span>
             </button>
-            <div class="slider-card-tech-dots orbit-card-tech-dots">
+            <div class="slider-card-tech-dots">
               <span></span><span></span><span></span>
             </div>
           </div>
         </div>
-
-        <div class="slider-card orbit-card" data-index="4" data-service-id="ai">
-          <div class="slider-card-top orbit-card-top">
-            <span class="slider-card-badge orbit-card-badge">LLM Agents • Intelligence</span>
-            <div class="slider-card-icon orbit-card-icon">🤖</div>
+        <div class="slider-card" data-index="5" data-service-id="devops">
+          <div class="slider-card-top">
+            <span class="slider-card-badge">Automation • Reliability</span>
+            <div class="slider-card-icon">⚙️</div>
           </div>
-          <div class="slider-card-art orbit-card-art">
-            <h3 class="slider-card-title orbit-card-title">AI & Workflow Automation</h3>
-            <p class="slider-card-desc orbit-card-desc">Build intelligent automated features, generative LLM integrations, and predictive systems that multiply team productivity.</p>
-            <div class="slider-card-art-visual orbit-card-art-visual">
+          <div class="slider-card-art">
+            <h3 class="slider-card-title">DevOps & CI/CD Pipelines</h3>
+            <p class="slider-card-desc">Automate build, test, and deployment pipelines with modern infrastructure-as-code and 24/7 observability.</p>
+            <div class="slider-card-art-visual">
+              <div class="card-art-pipe"><div class="pipe-node pn-1">✓ Build</div><div class="pipe-arr">→</div><div class="pipe-node pn-2">✓ Deploy</div></div>
+            </div>
+          </div>
+          <div class="slider-card-bottom">
+            <button class="slider-card-action" aria-label="View details for DevOps & CI/CD Pipelines">
+              <span>View Details</span>
+              <span class="arrow-glyph">↗</span>
+            </button>
+            <div class="slider-card-tech-dots">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="slider-card" data-index="6" data-service-id="ai">
+          <div class="slider-card-top">
+            <span class="slider-card-badge">LLM Agents • Intelligence</span>
+            <div class="slider-card-icon">🤖</div>
+          </div>
+          <div class="slider-card-art">
+            <h3 class="slider-card-title">AI & Workflow Automation</h3>
+            <p class="slider-card-desc">Build intelligent automated features, generative LLM integrations, and predictive systems that multiply team productivity.</p>
+            <div class="slider-card-art-visual">
               <div class="card-art-ai"><div class="ai-sparkle">✦</div><div class="ai-mesh"><span></span><span></span><span></span></div><div class="ai-chip">NEURAL</div></div>
             </div>
           </div>
-          <div class="slider-card-bottom orbit-card-bottom">
-            <button class="slider-card-action orbit-card-action" aria-label="View details for AI & Workflow Automation">
+          <div class="slider-card-bottom">
+            <button class="slider-card-action" aria-label="View details for AI & Workflow Automation">
               <span>View Details</span>
               <span class="arrow-glyph">↗</span>
             </button>
-            <div class="slider-card-tech-dots orbit-card-tech-dots">
+            <div class="slider-card-tech-dots">
               <span></span><span></span><span></span>
             </div>
           </div>
         </div>
-
-        <div class="slider-card orbit-card" data-index="5" data-service-id="consulting">
-          <div class="slider-card-top orbit-card-top">
-            <span class="slider-card-badge orbit-card-badge">Strategy • Transformation</span>
-            <div class="slider-card-icon orbit-card-icon">💼</div>
+        <div class="slider-card" data-index="7" data-service-id="consulting">
+          <div class="slider-card-top">
+            <span class="slider-card-badge">Strategy • Transformation</span>
+            <div class="slider-card-icon">💼</div>
           </div>
-          <div class="slider-card-art orbit-card-art">
-            <h3 class="slider-card-title orbit-card-title">IT & Digital Consulting</h3>
-            <p class="slider-card-desc orbit-card-desc">Receive veteran technical leadership, legacy modernization roadmaps, security audits, and architectural guidance.</p>
-            <div class="slider-card-art-visual orbit-card-art-visual">
+          <div class="slider-card-art">
+            <h3 class="slider-card-title">IT & Digital Consulting</h3>
+            <p class="slider-card-desc">Receive veteran technical leadership, legacy modernization roadmaps, security audits, and architectural guidance.</p>
+            <div class="slider-card-art-visual">
               <div class="card-art-strat"><div class="strat-bar sb-1"></div><div class="strat-bar sb-2"></div><div class="strat-bar sb-3"></div><div class="strat-trend">↗ +180%</div></div>
             </div>
           </div>
-          <div class="slider-card-bottom orbit-card-bottom">
-            <button class="slider-card-action orbit-card-action" aria-label="View details for IT & Digital Consulting">
+          <div class="slider-card-bottom">
+            <button class="slider-card-action" aria-label="View details for IT & Digital Consulting">
               <span>View Details</span>
               <span class="arrow-glyph">↗</span>
             </button>
-            <div class="slider-card-tech-dots orbit-card-tech-dots">
+            <div class="slider-card-tech-dots">
               <span></span><span></span><span></span>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Dashboard Controls -->
-      <div class="slider-dashboard orbit-dashboard" id="sliderDashboard">
-        <button class="slider-nav-btn orbit-nav-btn prev" id="btnSliderPrev" aria-label="Previous service">‹</button>
-        <div class="slider-indicator-pill orbit-indicator-pill">
-          <span class="slider-dot-live orbit-dot-live"></span>
-          <span class="slider-counter orbit-counter" id="sliderCounter">SERVICE 01 / 06 • Modern Web Development</span>
+      <div class="slider-dashboard" id="sliderDashboard">
+        <button class="slider-nav-btn prev" id="btnSliderPrev" aria-label="Previous service">‹</button>
+        <div class="slider-indicator-pill">
+          <span class="slider-dot-live"></span>
+          <span class="slider-counter" id="sliderCounter">SERVICE 01 / 08 • Custom Software Development</span>
         </div>
-        <button class="slider-nav-btn orbit-nav-btn next" id="btnSliderNext" aria-label="Next service">›</button>
+        <button class="slider-nav-btn next" id="btnSliderNext" aria-label="Next service">›</button>
       </div>
-
-      <!-- Pagination Dots -->
-      <div class="slider-dots orbit-dots" id="sliderDots">
-
-          <button class="slider-dot orbit-dot active" data-index="0" aria-label="Slide 1"></button>
-
-          <button class="slider-dot orbit-dot" data-index="1" aria-label="Slide 2"></button>
-
-          <button class="slider-dot orbit-dot" data-index="2" aria-label="Slide 3"></button>
-
-          <button class="slider-dot orbit-dot" data-index="3" aria-label="Slide 4"></button>
-
-          <button class="slider-dot orbit-dot" data-index="4" aria-label="Slide 5"></button>
-
-          <button class="slider-dot orbit-dot" data-index="5" aria-label="Slide 6"></button>
+      <div class="slider-dots" id="sliderDots">
+          <button class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="slider-dot" data-index="3" aria-label="Slide 4"></button>
+          <button class="slider-dot" data-index="4" aria-label="Slide 5"></button>
+          <button class="slider-dot" data-index="5" aria-label="Slide 6"></button>
+          <button class="slider-dot" data-index="6" aria-label="Slide 7"></button>
+          <button class="slider-dot" data-index="7" aria-label="Slide 8"></button>
       </div>
     </div>
   </section>
@@ -453,7 +486,7 @@
                   <rect class="ci-win ci-win-3" x="10.5" y="30.5" width="4" height="2.5" rx="0.6" />
                   <rect class="ci-win ci-win-5" x="10.5" y="35" width="4" height="2.5" rx="0.6" />
                   <rect x="15" y="11" width="18" height="29" rx="2.5" fill="url(#ciOffMain)"
-                    stroke="#FFFFFF" stroke-width="1.5" />
+                    stroke="rgba(220, 38, 38, 0.55)" stroke-width="1.2" />
                   <rect x="18" y="9" width="12" height="2.5" rx="1" fill="url(#ciOffRoof)" />
                   <line x1="24" y1="9" x2="24" y2="3.5" stroke="url(#ciOffAcc)" stroke-width="1.4"
                     stroke-linecap="round" />
@@ -468,7 +501,7 @@
                   <rect class="ci-win ci-win-5" x="26" y="29" width="4" height="3" rx="0.8" />
                   <rect class="ci-portal" x="21.5" y="34.5" width="5" height="5.5" rx="1" fill="url(#ciOffAcc)" />
                   <path d="M33 25 L40 25 C40.8 25 41.5 25.7 41.5 26.5 L41.5 40 L33 40 Z" fill="url(#ciOffWing)"
-                    stroke="#FFFFFF" stroke-width="1.3" />
+                    stroke="rgba(220, 38, 38, 0.4)" stroke-width="1" />
                   <rect class="ci-win ci-win-4" x="35.5" y="28" width="3.5" height="2.5" rx="0.6" />
                   <rect class="ci-win ci-win-6" x="35.5" y="33" width="3.5" height="2.5" rx="0.6" />
                 </g>
@@ -589,7 +622,7 @@
                 </defs>
                 <ellipse cx="24" cy="42" rx="14" ry="3" fill="rgba(220, 38, 38, 0.16)" />
                 <g class="ci-clock-group">
-                  <circle cx="24" cy="24" r="18" fill="url(#ciClockDial)" stroke="#FFFFFF"
+                  <circle cx="24" cy="24" r="18" fill="url(#ciClockDial)" stroke="rgba(220, 38, 38, 0.35)"
                     stroke-width="1.2" />
                   <line x1="24" y1="8.5" x2="24" y2="11.5" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
                   <line x1="39.5" y1="24" x2="36.5" y2="24" stroke="rgba(220, 38, 38, 0.6)" stroke-width="1.5"
@@ -615,8 +648,7 @@
           </div>
         </div>
       </div>
-      <form class="contact-card reveal" name="contact" method="POST" data-netlify="true"
-        netlify-honeypot="bot-field" id="contact-form" action="/">
+      <form action='/' class='contact-card reveal' id='contact-form' method='POST' name='contact'>
         <input type="hidden" name="form-name" value="contact" />
         <p style="display:none">
           <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
@@ -679,6 +711,7 @@
         <h4>Services</h4>
         <span>Web Development</span>
         <span>Mobile Apps</span>
+        <span>Custom Software</span>
         <span>Cloud Solutions</span>
         <span>AI &amp; Automation</span>
         <span>IT Consulting</span>

@@ -493,131 +493,68 @@ body {
   user-select: none;
   filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.05));
 }
-.hero-freestanding-logo {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(240px, 28vw, 360px);
-  height: 80px;
-  cursor: pointer;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-  padding: 0 !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.hero-freestanding-logo:hover {
-  transform: scale(1.06) translateY(-4px);
-}
-
-.hero-brand-logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  user-select: none;
-  transition: filter 0.3s ease;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.06));
-}
-
-.hero-freestanding-logo:hover .hero-brand-logo-img {
-  filter: drop-shadow(0 8px 24px rgba(220, 38, 38, 0.22));
-}
-
-/* Specular Shimmer Sweep Beam - High Contrast Color Dodge Sheen */
 .hero-logo-shimmer-sweep {
   position: absolute;
   inset: 0;
+  -webkit-mask-image: url('../talvex-logo.png');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url('../talvex-logo.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
   pointer-events: none;
   overflow: hidden;
-  border-radius: 16px;
-  mix-blend-mode: color-dodge;
-  z-index: 3;
 }
-
 .hero-logo-shimmer-sweep::before {
   content: '';
   position: absolute;
-  top: -60%;
-  left: -110%;
-  width: 60%;
-  height: 220%;
+  top: -50%;
+  left: -120%;
+  width: 65%;
+  height: 200%;
   background: linear-gradient(
     115deg,
     transparent 0%,
-    rgba(220, 38, 38, 0.35) 25%,
-    rgba(255, 46, 85, 0.9) 48%,
+    rgba(220, 38, 38, 0.25) 25%,
+    rgba(255, 255, 255, 0.95) 48%,
     #FFFFFF 50%,
-    rgba(255, 46, 85, 0.9) 52%,
-    rgba(220, 38, 38, 0.35) 75%,
+    rgba(255, 255, 255, 0.95) 52%,
+    rgba(220, 38, 38, 0.25) 75%,
     transparent 100%
   );
-  filter: drop-shadow(0 0 14px rgba(220, 38, 38, 0.85));
-  animation: logoBeamSweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  will-change: transform, left;
+  filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
+  animation: logoLightSweep 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
-
-/* Secondary Glint Sparkle Flash */
 .hero-logo-shimmer-sweep::after {
-  content: '✦';
+  content: '';
   position: absolute;
-  top: 15%;
-  left: -110%;
-  font-size: 1.5rem;
-  color: #DC2626;
-  text-shadow: 0 0 12px #FF2E55, 0 0 24px #DC2626;
-  animation: logoSparkleSweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  pointer-events: none;
+  top: 0;
+  left: -120%;
+  width: 35%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.9) 0%, rgba(220, 38, 38, 0.4) 40%, transparent 70%);
+  filter: blur(2px);
+  animation: logoLightSweep 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
-
-@keyframes logoBeamSweep {
+@keyframes logoLightSweep {
   0% {
-    left: -110%;
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  55% {
-    left: 125%;
-    opacity: 1;
-  }
-  65%, 100% {
-    left: 125%;
-    opacity: 0;
-  }
-}
-
-@keyframes logoSparkleSweep {
-  0% {
-    left: -110%;
-    transform: scale(0.4) rotate(0deg);
+    left: -120%;
     opacity: 0;
   }
   10% {
     opacity: 1;
-    transform: scale(1.2) rotate(45deg);
   }
-  50% {
-    transform: scale(1) rotate(180deg);
-  }
-  55% {
-    left: 120%;
+  60% {
+    left: 130%;
     opacity: 1;
-    transform: scale(1.3) rotate(270deg);
   }
-  65%, 100% {
-    left: 120%;
+  70%, 100% {
+    left: 130%;
     opacity: 0;
-    transform: scale(0.3) rotate(360deg);
   }
 }
-
 @keyframes ambientLogoPulse {
   0% {
     transform: scale(0.9);
@@ -1012,8 +949,7 @@ section {
 .services-header .section-label::before {
   display: none;
 }
-/* ── 3D ORBIT CAROUSEL ANIMATION STYLES ── */
-.orbit-wrapper, .slider-wrapper {
+.slider-wrapper {
   position: relative;
   width: 100%;
   max-width: 1400px;
@@ -1027,20 +963,28 @@ section {
   user-select: none;
   touch-action: pan-y;
 }
-
-.orbit-stage, .slider-stage {
+.slider-glow {
+  position: absolute;
+  width: 750px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: blur(50px);
+}
+.slider-stage {
   position: relative;
   width: 100%;
-  height: 480px;
+  height: 470px;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1300px;
-  perspective-origin: center 65%;
   z-index: 10;
 }
-
-.orbit-card, .slider-card {
+.slider-card {
   position: absolute;
   width: 295px;
   height: 430px;
@@ -1054,36 +998,18 @@ section {
   box-shadow: 0 16px 45px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
   cursor: pointer;
   transition:
-    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.6s ease,
     border-color 0.35s ease,
     box-shadow 0.35s ease;
   will-change: transform, opacity;
-  transform-origin: center bottom;
+  transform-origin: center center;
   overflow: hidden;
 }
-
-.orbit-card.active-center,
-.slider-card.active-center,
-.orbit-card.active,
-.slider-card.active {
+.slider-card.active-center {
   border: 1.5px solid rgba(220, 38, 38, 0.45);
   box-shadow: 0 24px 60px rgba(220, 38, 38, 0.14), 0 4px 16px rgba(0, 0, 0, 0.04);
 }
-
-.orbit-card.active-center .orbit-card-badge,
-.slider-card.active-center .slider-card-badge {
-  background: rgba(220, 38, 38, 0.08);
-  color: #DC2626;
-  border-color: rgba(220, 38, 38, 0.25);
-}
-
-.orbit-card.active-center .orbit-card-action,
-.slider-card.active-center .slider-card-action {
-  background: #DC2626;
-  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
-}
-
 .slider-card-top {
   display: flex;
   align-items: center;
@@ -1680,22 +1606,21 @@ section {
   width: 58px;
   height: 58px;
   border-radius: 16px;
-  background: #111827;
-  border: 2px solid #FFFFFF !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 0 10px rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(20, 27, 65, 0.72) 0%, rgba(9, 13, 36, 0.9) 100%);
+  border: 1px solid rgba(220, 38, 38, 0.32);
+  box-shadow:
+    0 8px 24px -4px rgba(2, 6, 23, 0.75),
+    inset 0 0 16px rgba(220, 38, 38, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   position: relative;
   overflow: visible;
-}
-
-.ci-svg {
-  width: 34px;
-  height: 34px;
-  overflow: visible;
-  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.9));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
 }
 .ci-icon::after {
   content: '';
@@ -2666,46 +2591,4 @@ section[id] { scroll-margin-top: 110px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-}
-
-/* ── SCROLL REVEAL ANIMATIONS ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* ── MOUSE SPOTLIGHT HOVER GLOW EFFECT ── */
-/* ── MOUSE SPOTLIGHT HOVER GLOW EFFECT (MATCHING NETLIFY) ── */
-.cursor-glow {
-  position: fixed;
-  width: 650px;
-  height: 650px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(31, 41, 55, 0.22) 0%, rgba(75, 85, 99, 0.12) 35%, rgba(220, 38, 38, 0.03) 55%, transparent 70%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  filter: blur(40px);
-  transition: opacity 0.4s ease;
-  will-change: left, top;
-}
-
-@media (pointer: coarse), (max-width: 768px) {
-  .cursor-glow {
-    display: none !important;
-  }
-}
-
-@media (pointer: coarse), (max-width: 768px) {
-  .cursor-glow {
-    display: none !important;
-  }
 }
